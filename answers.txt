@@ -1,0 +1,14 @@
+--------Dinos-
+1. SELECT COUNT(id) FROM dinos;
+2. SELECT * FROM dinos WHERE period='Jurassic';
+3. SELECT SUM(length) FROM dinos WHERE period='Cretaceous';
+4. SELECT * FROM dinos WHERE period='Cretaceous' OR period='Jurassic' ORDER BY species;
+5. SELECT * FROM dinos WHERE t_order='Saurischia' AND diet='Herbivorous';
+6. UPDATE dinos SET name='Shortie' WHERE(LENGTH=(SELECT MIN(length) FROM dinos));
+7. SELECT name from dinos ORDER BY name LIMIT 1;
+
+--------Simpsons-
+
+1. SELECT * FROM episodes WHERE season_id=15;
+2. SELECT name FROM characters WHERE actor_id=(SELECT id FROM actors WHERE first_name='Nancy' AND last_name='Cartwright');
+3. SELECT title FROM episodes WHERE id=(SELECT most_watched_episode_id FROM seasons WHERE number=1);
